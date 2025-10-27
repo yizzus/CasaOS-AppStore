@@ -29,10 +29,10 @@ x-casaos:
   port_map: "3000"
   scheme: http
   store_app_id: icloudpd-manager
-  icon: https://raw.githubusercontent.com/yizzus/CasaOS-AppStore/main/Apps/iCloudPDManager/icon.png
+  icon: https://raw.githubusercontent.com/yizzus/CasaOS-AppStore/yiz-AppStore/Apps/iCloudPDManager/icon.png
   screenshot_link:
-    - https://raw.githubusercontent.com/yizzus/CasaOS-AppStore/main/Apps/iCloudPDManager/screenshot-1.png
-  thumbnail: https://raw.githubusercontent.com/yizzus/CasaOS-AppStore/main/Apps/iCloudPDManager/thumbnail.png
+    - https://raw.githubusercontent.com/yizzus/CasaOS-AppStore/yiz-AppStore/Apps/iCloudPDManager/screenshot-1.png
+  thumbnail: https://raw.githubusercontent.com/yizzus/CasaOS-AppStore/yiz-AppStore/Apps/iCloudPDManager/thumbnail.png
   tips:
     before_install:
       en_us: |
