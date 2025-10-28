@@ -1,0 +1,39 @@
+{
+  "name": "yiz-icloudpd-manager",
+  "title": {
+    "en_us": "iCloudPD Manager"
+  },
+  "description": {
+    "en_us": "Web-based management interface for iCloudPD. Easily configure multiple iCloud accounts, manage authentication, and monitor photo syncing. This is the companion app to 'iCloudPD' - install both for the complete solution."
+  },
+  "developer": "yizzus",
+  "author": "YizAppStore",
+  "icon": "https://cdn.jsdelivr.net/gh/yizzus/CasaOS-AppStore@yiz-AppStore/Apps/yiz-icloudpd-manager/icon.png",
+  "tagline": {
+    "en_us": "Manage your iCloud photo syncing with ease"
+  },
+  "thumbnail": "https://cdn.jsdelivr.net/gh/yizzus/CasaOS-AppStore@yiz-AppStore/Apps/yiz-icloudpd-manager/thumbnail.png",
+  "screenshots": [
+    "https://cdn.jsdelivr.net/gh/yizzus/CasaOS-AppStore@yiz-AppStore/Apps/yiz-icloudpd-manager/screenshot-1.png"
+  ],
+  "tips": {
+    "before_install": {
+      "en_us": "This is the web-based manager for iCloudPD. For the complete solution:\n\n1. Install this 'iCloudPD Manager' first\n2. Then install 'iCloudPD' from YizAppStore\n3. Access the manager at http://your-server-ip:8000\n4. Add your iCloud accounts and configure sync settings\n\nThe manager will help you authenticate with iCloud and manage the iCloudPD container."
+    }
+  },
+  "category": "Backup",
+  "port_map": "8000",
+  "scheme": "http",
+  "index": "/",
+  "store_app_id": "yiz-icloudpd-manager",
+  "project_url": "https://github.com/yizzus/icloudpd-manager",
+  "screenshot_link": [
+    "https://cdn.jsdelivr.net/gh/yizzus/CasaOS-AppStore@yiz-AppStore/Apps/yiz-icloudpd-manager/screenshot-1.png"
+  ],
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "version": "1.0.0",
+  "container_name": "yiz-icloudpd-manager"
+}

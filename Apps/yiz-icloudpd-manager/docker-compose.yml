@@ -1,0 +1,41 @@
+name: yiz-icloudpd-manager
+
+services:
+  app:
+    image: yizzus9/icloudpd-manager:latest
+    container_name: yiz-icloudpd-manager
+    hostname: yiz-icloudpd-manager
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - /DATA/AppData/yiz-icloudpd/config:/config
+      - /DATA/Gallery/iCloudPhotos:/photos
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - TZ=${TZ:-UTC}
+    networks:
+      - yiz_icloudpd_manager_network
+    x-casaos:
+      envs:
+        - container: TZ
+          description:
+            en_us: Timezone
+      volumes:
+        - container: /config
+          description:
+            en_us: Configuration directory (shared with iCloudPD)
+        - container: /photos
+          description:
+            en_us: Photos directory (shared with iCloudPD)
+        - container: /var/run/docker.sock
+          description:
+            en_us: Docker socket for managing iCloudPD container
+      ports:
+        - container: "8000"
+          description:
+            en_us: Web interface port
+
+networks:
+  yiz_icloudpd_manager_network:
+    name: yiz_icloudpd_manager_network
