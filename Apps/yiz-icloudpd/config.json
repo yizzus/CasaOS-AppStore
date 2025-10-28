@@ -1,0 +1,35 @@
+{
+  "name": "yiz-icloudpd",
+  "title": {
+    "en_us": "iCloudPD"
+  },
+  "description": {
+    "en_us": "Automatically download photos and videos from iCloud to your server. Supports multiple accounts, selective sync, and automatic authentication. Install 'iCloudPD Manager' for easy configuration through a web interface."
+  },
+  "developer": "boredazfcuk",
+  "author": "YizAppStore",
+  "icon": "https://cdn.jsdelivr.net/gh/yizzus/CasaOS-AppStore@yiz-AppStore/Apps/yiz-icloudpd/icon.png",
+  "tagline": {
+    "en_us": "Sync your iCloud Photos automatically"
+  },
+  "thumbnail": "https://cdn.jsdelivr.net/gh/yizzus/CasaOS-AppStore@yiz-AppStore/Apps/yiz-icloudpd/icon.png",
+  "tips": {
+    "before_install": {
+      "en_us": "⚠️ Important: This app requires manual authentication setup. For easier management, install 'iCloudPD Manager' from YizAppStore.\n\nYou'll need:\n• Your Apple ID credentials\n• Two-factor authentication enabled on your Apple account\n• A folder to store downloaded photos\n\nRecommended: Install 'iCloudPD Manager' for a user-friendly web interface to manage your iCloud accounts and authentication."
+    }
+  },
+  "category": "Backup",
+  "port_map": "",
+  "scheme": "",
+  "index": "",
+  "store_app_id": "yiz-icloudpd",
+  "project_url": "https://github.com/boredazfcuk/docker-icloudpd",
+  "screenshot_link": [],
+  "architectures": [
+    "amd64",
+    "arm64",
+    "arm"
+  ],
+  "version": "1.19.2",
+  "container_name": "yiz-icloudpd"
+}

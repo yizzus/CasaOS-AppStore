@@ -1,0 +1,68 @@
+name: yiz-icloudpd
+
+services:
+  app:
+    image: boredazfcuk/icloudpd:latest
+    container_name: yiz-icloudpd
+    hostname: yiz-icloudpd
+    restart: unless-stopped
+    environment:
+      - TZ=${TZ:-UTC}
+      - apple_id=${APPLE_ID:-}
+      - authentication_type=${AUTH_TYPE:-MFA}
+      - download_notifications=${DOWNLOAD_NOTIFICATIONS:-false}
+      - notification_type=${NOTIFICATION_TYPE:-}
+      - notification_title=${NOTIFICATION_TITLE:-}
+      - photo_size=${PHOTO_SIZE:-original}
+      - download_path=${DOWNLOAD_PATH:-/icloud}
+      - folder_structure=${FOLDER_STRUCTURE:-{:%Y/%m}}
+      - auto_delete=${AUTO_DELETE:-false}
+      - skip_videos=${SKIP_VIDEOS:-false}
+      - skip_live_photos=${SKIP_LIVE_PHOTOS:-false}
+      - live_photo_size=${LIVE_PHOTO_SIZE:-original}
+    volumes:
+      - /DATA/AppData/yiz-icloudpd/config:/config
+      - /DATA/Gallery/iCloudPhotos:/icloud
+    networks:
+      - yiz_icloudpd_network
+    x-casaos:
+      envs:
+        - container: TZ
+          description:
+            en_us: Timezone (e.g., America/New_York)
+        - container: APPLE_ID
+          description:
+            en_us: Your Apple ID email address
+        - container: AUTH_TYPE
+          description:
+            en_us: Authentication type (MFA or 2FA)
+        - container: DOWNLOAD_NOTIFICATIONS
+          description:
+            en_us: Enable download notifications (true/false)
+        - container: PHOTO_SIZE
+          description:
+            en_us: Photo size to download (original, medium, or thumb)
+        - container: FOLDER_STRUCTURE
+          description:
+            en_us: Folder structure for organizing photos
+        - container: AUTO_DELETE
+          description:
+            en_us: Auto-delete photos from iCloud after download (true/false)
+        - container: SKIP_VIDEOS
+          description:
+            en_us: Skip downloading videos (true/false)
+        - container: SKIP_LIVE_PHOTOS
+          description:
+            en_us: Skip downloading live photos (true/false)
+      volumes:
+        - container: /config
+          description:
+            en_us: Configuration files and authentication cookies
+        - container: /icloud
+          description:
+            en_us: Downloaded photos storage location
+      ports: []
+
+networks:
+  yiz_icloudpd_network:
+    name: yiz_icloudpd_network
